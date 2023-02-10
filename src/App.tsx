@@ -5,7 +5,6 @@ import { AboutPageAsync } from './pages/AboutPage/AboutPage.async';
 import { MainPageAsync } from './pages/MainPage/MainPage.async';
 
 import './styles/index.scss';
-import { Theme, ThemeContext } from './theme/ThemeContext';
 import { useTheme } from './theme/useTheme';
 
 export const App = () => {
