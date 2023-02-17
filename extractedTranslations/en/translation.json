@@ -1,10 +1,12 @@
 {
   "About": "About",
   "About page": "About page",
-  "LaMainnguage": "LaMainnguage",
   "Language": "Language",
   "Main": "Main",
   "Main page": "Main page",
-  "Theme": "Theme",
+  "Not Found Page": "Not Found Page",
+  "Page not found": "Page not found",
+  "Reload": "Reload",
+  "Something went wrong": "Something went wrong",
   "Toogle": "Toogle"
 }

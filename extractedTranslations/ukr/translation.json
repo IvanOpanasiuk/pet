@@ -1,10 +1,12 @@
 {
-  "About": "Про сайт",
-  "About page": "Сторінка про сайт",
-  "LaMainnguage": "LaMainnguage",
-  "Language": "Українська",
-  "Main": "Головна",
-  "Main page": "Головна сторінка",
-  "Theme": "Тема",
+  "About": "About",
+  "About page": "About page",
+  "Language": "Language",
+  "Main": "Main",
+  "Main page": "Main page",
+  "Not Found Page": "Not Found Page",
+  "Page not found": "Page not found",
+  "Reload": "Reload",
+  "Something went wrong": "Something went wrong",
   "Toogle": "Toogle"
 }

@@ -10,7 +10,7 @@ export const LangSwitcher = ({ className }: Props) => {
   const { t, i18n } = useTranslation();
 
   const toggle = () => {
-    i18n.changeLanguage(i18n.language === 'en' ? 'ukr' : 'en');
+    i18n.changeLanguage(i18n.language === 'en' ? 'uk_UA' : 'en');
   };
 
   console.log(className, 'className');
