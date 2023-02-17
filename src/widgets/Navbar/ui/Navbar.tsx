@@ -1,16 +1,16 @@
 
-import { useTranslation } from 'react-i18next'
-import classNames from 'shared/lib/classNames/classNames'
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
+import { useTranslation } from 'react-i18next';
+import classNames from 'shared/lib/classNames/classNames';
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 
-import styles from './Navbar.module.scss'
+import styles from './Navbar.module.scss';
 
 interface Props {
-  className?: string
+  className?: string;
 }
 
 export const Navbar = ({ className }: Props): JSX.Element => {
-  const { t } = useTranslation('nav')
+  const { t } = useTranslation('nav');
   return (
       <div className={classNames(styles.Navbar)}>
           <div className={styles.Links}>
@@ -30,5 +30,5 @@ export const Navbar = ({ className }: Props): JSX.Element => {
               </AppLink>
           </div>
       </div>
-  )
-}
+  );
+};

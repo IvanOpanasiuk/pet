@@ -11,5 +11,5 @@ export default function classNames (
     ...Object.entries(mods)
       .filter(([className, value]) => Boolean(value))
       .map(([className, value]) => className)
-  ].join(' ')
+  ].join(' ');
 }

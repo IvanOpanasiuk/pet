@@ -1,7 +1,8 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
+    jest: true
   },
   extends: ['plugin:react/recommended', 'standard-with-typescript', 'plugin:i18next/recommended'],
   overrides: [],
@@ -24,11 +25,24 @@ module.exports = {
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/naming-convention': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
-    'i18next/no-literal-string': ['error', { markupOnly: true }]
-    // semi: 'off',
-    // '@typescript-eslint/semi': 'error'
+    'i18next/no-literal-string': ['error', { markupOnly: true }],
+    semi: ['error', 'always', { omitLastInOneLineBlock: false }],
+    '@typescript-eslint/semi': 'off',
+    '@typescript-eslint/member-delimiter-style': ['error', {
+      multiline: {
+        delimiter: 'semi',
+        requireLast: true
+      },
+      singleline: {
+        delimiter: 'semi',
+        requireLast: true
+      },
+      multilineDetection: 'brackets'
+    }
+
+    ]
   },
   globals: {
     __IS_DEV__: true
   }
-}
+};
