@@ -30,8 +30,6 @@ export default {
   ],
   rootDir: '../../'
 
-  // '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'
-
   // Stop running tests after `n` failures
   // bail: 0,
 
