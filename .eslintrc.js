@@ -4,19 +4,22 @@ module.exports = {
     es2021: true,
     jest: true
   },
-  extends: ['plugin:react/recommended', 'standard-with-typescript', 'plugin:i18next/recommended'],
+  extends: ['plugin:react/recommended', 'standard-with-typescript', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
   overrides: [],
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
     tsconfigRootDir: __dirname,
-    project: ['./tsconfig.json']
+    project: ["./tsconfig.json"]
   },
   plugins: ['react', '@typescript-eslint', 'i18next'],
   rules: {
     'react/jsx-indent': [2, 4],
     'react/jsx-indent-props': [2, 4],
-    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
+    'react/jsx-filename-extension': [2, {
+      extensions: ['.js', '.jsx', '.ts', '.tsx']
+    }],
     '@typescript-eslint/prefer-nullish-coalescing': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
     'react/require-default-rops': 'off',
@@ -25,8 +28,12 @@ module.exports = {
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/naming-convention': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
-    'i18next/no-literal-string': ['error', { markupOnly: true }],
-    semi: ['error', 'always', { omitLastInOneLineBlock: false }],
+    'i18next/no-literal-string': ['error', {
+      markupOnly: true
+    }],
+    semi: ['error', 'always', {
+      omitLastInOneLineBlock: false
+    }],
     '@typescript-eslint/semi': 'off',
     '@typescript-eslint/member-delimiter-style': ['error', {
       multiline: {
@@ -38,11 +45,10 @@ module.exports = {
         requireLast: true
       },
       multilineDetection: 'brackets'
-    }
-
-    ]
+    }]
   },
   globals: {
     __IS_DEV__: true
-  }
+  },
+  ignorePatterns: ['.eslintrc.js']
 };

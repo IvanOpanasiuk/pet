@@ -3,32 +3,45 @@
  * https://jestjs.io/docs/configuration
  */
 
+import path from 'path';
+
 export default {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
   clearMocks: true,
+  testEnvironment: 'jsdom',
   coveragePathIgnorePatterns: [
-    '/node_modules/'
-  ],
-  moduleDirectories: [
-    'node_modules'
+    '\\\\node_modules\\\\'
   ],
   moduleFileExtensions: [
     'js',
-    'mjs',
-    'cjs',
     'jsx',
     'ts',
     'tsx',
     'json',
     'node'
   ],
-  testMatch: [
-    '**/__tests__/**/*.[jt]s?(x)',
-    '**/?(*.)+(spec|test).[tj]s?(x)'
+  moduleDirectories: [
+    'node_modules'
   ],
-  rootDir: '../../'
+  modulePaths: [
+    '<rootDir>src'
+  ],
+  // testMatch: [
+  //   '<rootDir>src/**/?(*.)+(spec|test).[tj]s?(x)'
+  // ],
+  testMatch: [
+    // Обнаружил разницу между МАК ОС и ВИНДОУС!!!
+    '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'
+  ],
+  rootDir: '../../',
+  setupFilesAfterEnv: ['<rootDir>config/jest/setupTest.ts'],
+  moduleNameMapper: {
+    '\\.s?css$': 'identity-obj-proxy',
+    '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx')
+  }
+  // testEnvironment: 'jsdom'
 
   // Stop running tests after `n` failures
   // bail: 0,
@@ -149,7 +162,6 @@ export default {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  // testEnvironment: "jest-environment-node",
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
