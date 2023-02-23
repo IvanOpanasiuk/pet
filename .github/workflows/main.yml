@@ -1,5 +1,5 @@
 name: linting, testing, building
-oon:
+on:
   push:
     branches: [ main ]
   pull_request:
@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: npm ci
+      - name: install modules
       - run: npm ci
       - name: build production project
       - run: npm run build:prod
