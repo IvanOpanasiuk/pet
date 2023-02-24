@@ -1,9 +1,24 @@
 import { type BuildPaths } from './../build/types/config';
 import type webpack from 'webpack';
 import path from 'path';
-import { buildCssLoader } from '../build/buildCssLoader';
 
 export default ({ config }: { config: webpack.Configuration; }) => {
+  const buildCssLoader = {
+    test: /\.s[ac]ss$/i,
+    use: [
+      'style-loader',
+      {
+        loader: 'css-loader',
+        options: {
+          modules: {
+            auto: (resPath: string) => Boolean(resPath.includes('.module.')),
+            localIdentName: '[path][name]__[local]--[hash:base64:5]'
+          }
+        }
+      },
+      'sass-loader'
+    ]
+  };
   const paths: BuildPaths = {
     build: '',
     html: '',
@@ -13,6 +28,6 @@ export default ({ config }: { config: webpack.Configuration; }) => {
   config.resolve.modules.push(paths.src);
   config.resolve.extensions.push('.ts', '.tsx');
 
-  config.module.rules.push(buildCssLoader(true));
+  config.module.rules.push(buildCssLoader);
   return config;
 };
