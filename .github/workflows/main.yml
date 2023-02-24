@@ -6,13 +6,14 @@ on:
     branches: [ main ]
 jobs:
   pipeline:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
+        os: [ubuntu-latest, [self-hosted, macOS]]
         node-version: [ 17.x ]
     steps:
-      - uses: actions/checkout@v3
-      - name: Staring Node.js ${{ matrix.node-version }}
+      - uses: actions/checkout@v2
+      - name: name: Staring Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
