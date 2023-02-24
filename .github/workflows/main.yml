@@ -6,10 +6,9 @@ on:
     branches: [ main ]
 jobs:
   pipeline:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        os: [ubuntu-latest, [self-hosted, macOS]]
         node-version: [ 17.x ]
     steps:
       - uses: actions/checkout@v2
@@ -18,7 +17,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: install modules
-        run: npm ci
+        run: npm install
       - name: build production project
         run: npm run build:prod
       - name: linting typescript
