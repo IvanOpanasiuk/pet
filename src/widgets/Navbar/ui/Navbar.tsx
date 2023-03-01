@@ -14,20 +14,7 @@ export const Navbar = ({ className }: Props): JSX.Element => {
   return (
       <div className={classNames(styles.Navbar)}>
           <div className={styles.Links}>
-              <AppLink
-                  theme={AppLinkTheme.SECONDARY}
-                  className={styles.LinkItem}
-                  to={'/'}
-                >
-                  {t('Main')}
-              </AppLink>
-              <AppLink
-                  theme={AppLinkTheme.SECONDARY}
-                  className={styles.LinkItem}
-                  to={'/about'}
-                >
-                  {t('About')}
-              </AppLink>
+              /
           </div>
       </div>
   );
