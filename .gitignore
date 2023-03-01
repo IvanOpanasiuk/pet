@@ -9,10 +9,8 @@ node_modules
 
 # testing
 /coverage
-
-# next.js
-/.next/
-/out/
+.loki/report.json
+.loki/report.html
 
 # production
 build
