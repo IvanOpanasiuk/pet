@@ -1,4 +1,3 @@
-import React from 'react';
 import { type ComponentStory, type ComponentMeta } from '@storybook/react';
 
 import { Modal } from './Modal';
@@ -22,10 +21,10 @@ Normal.args = {
   children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Veniam ipsam facere, modi itaque at perferendis.Amet saepe consectetur, repudiandae tenetur porro expedita,illo, excepturi ipsum nostrum deleniti adipisci cumque quibusdam.'
 };
 
-export const Dark = Template.bind({});
-Dark.args = {
-  isOpen: true,
-  children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Veniam ipsam facere, modi itaque at perferendis.Amet saepe consectetur, repudiandae tenetur porro expedita,illo, excepturi ipsum nostrum deleniti adipisci cumque quibusdam.'
-};
+// export const Dark = Template.bind({});
+// Dark.args = {
+//   isOpen: true,
+//   children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Veniam ipsam facere, modi itaque at perferendis.Amet saepe consectetur, repudiandae tenetur porro expedita,illo, excepturi ipsum nostrum deleniti adipisci cumque quibusdam.'
+// };
 
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
+// Dark.decorators = [ThemeDecorator(Theme.DARK)];
