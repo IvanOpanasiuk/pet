@@ -5,5 +5,7 @@
   "Reload": "Reload",
   "Short": "En",
   "Enter name": "Enter name",
-  "Enter password": "Enter password"
+  "Enter password": "Enter password",
+  "Authorisation form": "Athorisation form",
+  "Logout": "Logout"
 }

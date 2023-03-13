@@ -6,5 +6,8 @@
   "Reload": "Перезагрузити",
   "Short": "Ukr",
   "Enter name": "Введіть імʼя",
-  "Enter password": "Введіть пароль"
+  "Enter password": "Введіть пароль",
+  "Authorisation form": "Форма авторізіції",
+  "Something went wrong": "Щось пішло не так",
+  "Logout": "Вийти"
 }
