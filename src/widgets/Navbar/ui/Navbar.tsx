@@ -43,7 +43,7 @@ export const Navbar = ({ className }: Props): JSX.Element => {
           <Button className={styles.Links} theme={ButtonTheme.CLEAR_INVERTED} onClick={handlerShowModal}>
               {t('Login')}
           </Button>
-          <LoginModal isOpen={isAuthModal} onClose={handlerCloseModal} />
+          {isAuthModal && <LoginModal isOpen={isAuthModal} onClose={handlerCloseModal} />}
       </div>
   );
 };
